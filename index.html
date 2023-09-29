@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar_title">
+        <span><i class="fa-solid fa-swatchbook"></i></span> Ruang Baca
+      </h1>
+    </header>
+    <main class="wrapper">
+      <div class="container left_section">
+        <section class="input_section" id="inputSection">
+          <p>
+            Makin banyak membaca, makin aku banyak berpikir; makin aku banyak
+            belajar; makin aku sadar bahwa aku tak mengetahui apa pun.
+            <i class="fas fa-heart"></i>
+          </p>
+          <hr />
+          <form id="inputBook">
+            <div class="input" id="sectionTitle">
+              <label for="inputBookTitle">Judul</label>
+              <input id="inputBookTitle" type="text" />
+              <small class="error-display" id="errorTitle">Wajib Diisi</small>
+            </div>
+            <div class="input" id="sectionAuthor">
+              <label for="inputBookAuthor">Penulis</label>
+              <input id="inputBookAuthor" type="text" />
+              <small class="error-display" id="errorAuthor">Wajib Diisi</small>
+            </div>
+            <div class="input" id="sectionYear">
+              <label for="inputBookYear">Tahun</label>
+              <input id="inputBookYear" type="number" />
+              <small class="error-display" id="errorYear">Wajib Diisi</small>
+            </div>
+            <div class="input_inline">
+              <label for="inputBookIsComplete">Selesai dibaca</label>
+              <input id="inputBookIsComplete" type="checkbox" />
+            </div>
+            <button class="btn-grad" id="bookSubmit" type="button">
+              Masukkan Buku
+            </button>
+          </form>
+        </section>
+      </div>
+      <div class="container right_section">
+        <section class="search_section book_shelf" id="searchSection">
+          <form id="searchBook">
+            <input id="searchBookTitle" type="text" />
+            <button id="searchSubmit" type="submit" class="btn-grad">
+              Cari
+            </button>
+          </form>
+
+          <div id="searchResult" class="book_result"></div>
+        </section>
+        <div class="shelf">
+          <div class="row">
+            <section class="book_shelf" id="bookShelfUncompleted">
+              <h2 id="uncompletedH2">Belum selesai dibaca</h2>
+
+              <div id="incompleteBookshelfList" class="book_list"></div>
+            </section>
+          </div>
+          <div class="row">
+            <section class="book_shelf" id="bookShelfCompleted">
+              <h2 id="completedH2">Selesai dibaca</h2>
+
+              <div id="completeBookshelfList" class="book_list"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
