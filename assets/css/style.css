@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --green: hsl(145, 63%, 49%);
+  --yellow: hsl(48, 89%, 50%);
+  --red: hsl(6, 78%, 57%);
+  --main-color: hsl(181, 100%, 44%);
+  --main-color-alt: hsl(298, 77%, 67%);
+  --main-color-alt-1: hsl(204, 64%, 44%);
+  --color-gray: hsl(0, 0%, 40%);
+  --color-gray-1: hsl(0, 0%, 60%);
+  --color-gray-2: hsl(0, 0%, 85%);
+  --color-heart: hsl(0, 100%, 50%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Poppins-Regular;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-gray);
+  margin: 0;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: -o-linear-gradient(
+    45deg,
+    var(--main-color),
+    var(--main-color-alt)
+  );
+  background: -moz-linear-gradient(
+    45deg,
+    var(--main-color),
+    var(--main-color-alt)
+  );
+  background: linear-gradient(45deg, var(--main-color), var(--main-color-alt));
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+header > h1 {
+  font-family: 'Courier Prime', monospace;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white);
+}
+header > h1 > span > i {
+  font-size: 40px;
+  color: var(--white);
+}
+
+.wrapper {
+  display: flex;
+}
+
+.container {
+  background: var(--white);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.left_section {
+  flex-basis: 30%;
+  width: fit-content;
+  block-size: fit-content;
+}
+.left_section > .input_section > p {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.fa-heart {
+  color: var(--color-heart);
+}
+.input_section > hr {
+  margin-top: 15px;
+}
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color-alt) 51%,
+    var(--main-color) 100%
+  );
+  border: 0;
+  width: 100%;
+  padding: 15px 45px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--white);
+  /* box-shadow: 0 0 20px #eee; */
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: var(--white);
+  text-decoration: none;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input_section > form > .input > label {
+  color: var(--main-color-alt-1);
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: var(--main-color-alt-1);
+  font-weight: bold;
+  margin-right: 10px;
+}
+.right_section {
+  flex-basis: 70%;
+  display: flex;
+  min-height: 400px;
+  flex-direction: column;
+}
+
+.right_section .row {
+  flex-basis: 50%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.search_section {
+  width: 100%;
+}
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  display: flex;
+  align-items: center;
+}
+
+.search_section > form > input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search_section > form > button {
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color-alt) 51%,
+    var(--main-color) 100%
+  );
+  border: 0;
+  width: 100%;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--white);
+  border-radius: 10px;
+  display: block;
+}
+
+.search_result {
+  display: flex;
+}
+
+.search_items > h3 {
+  font-size: 24pt;
+  line-height: 1em;
+}
+.book_result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin: 20px 20px 0;
+}
+.book_result > .search_items {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  margin-top: -15px;
+  width: 100%;
+}
+
+.shelf {
+  display: flex;
+  width: 100%;
+}
+.book_shelf > h2 {
+  color: var(--main-color-alt-1);
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3 {
+  font-size: 24pt;
+  line-height: 1em;
+}
+.book_shelf > .book_list > .book_item > p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.book_shelf > .book_list > .book_item > .action > .yellow {
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: var(--red);
+  color: var(--white);
+}
+img {
+  width: 70%;
+  height: 50%;
+}
+.error {
+  border: 2px solid red;
+}
+
+small {
+  color: var(--red);
+}
+
+.error-display {
+  display: none;
+}
